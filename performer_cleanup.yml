@@ -1,0 +1,14 @@
+# example plugin config
+name: Performer Cleanup
+description: Cleanup Performers that are assigned to a scene but shouldn't
+version: 0.1
+url: https://github.com/com1234475/stash-plugin-performer-creator
+exec:
+ - env/bin/python
+ - "{pluginDir}/performer_cleanup.py"
+interface: raw
+tasks:
+  - name: cleanup performers
+    description: Cleanup the performers
+    defaultArgs:
+      mode: cleanup
